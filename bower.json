@@ -1,0 +1,20 @@
+{
+  "name": "vue-medium",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ivan Gabriele <ivan.gabriele@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ivangabriele/vue-medium",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "medium-editor": "^5.23.0"
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vue.js :: medium-editor plugin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../node_modules/medium-editor/dist/css/medium-editor.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div v-medium>Editable content.</div>
+    </div>
+    <script src="../node_modules/medium-editor/dist/js/medium-editor.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      Vue.directive('medium', {
+        inserted: function (el) {
+          new MediumEditor(el);
+        }
+      });
+
+      var app = new Vue({ el: '#app' });
+    </script>
+  </body>
+</html>
