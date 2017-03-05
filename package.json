@@ -1,9 +1,10 @@
 {
   "name": "vue-medium",
   "version": "5.23.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Standalone Vue.js 2 plugin to use contentEditable as a model with medium-editor integration.",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "cross-env webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,14 @@
     "url": "https://github.com/ivangabriele/vue-medium/issues"
   },
   "homepage": "https://github.com/ivangabriele/vue-medium#readme",
-  "dependencies": {
-    "medium-editor": "^5.23.0"
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.2.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "cross-env": "^3.2.3",
+    "medium-editor": "^5.23.0",
+    "webpack": "^2.2.1"
   }
 }
