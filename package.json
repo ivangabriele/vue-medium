@@ -1,10 +1,10 @@
 {
   "name": "vue-medium",
-  "version": "5.23.0",
+  "version": "5.23.0-1",
   "description": "Standalone Vue.js 2 plugin to use contentEditable as a model with medium-editor integration.",
-  "main": "dist/index.js",
+  "main": "dist/index.common.js",
   "scripts": {
-    "build": "cross-env webpack -p",
+    "build": "cross-env webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "cross-env": "^3.2.3",
     "medium-editor": "^5.23.0",
+    "uglify-loader": "^2.0.0",
     "webpack": "^2.2.1"
   }
 }

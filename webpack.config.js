@@ -1,9 +1,5 @@
-module.exports = {
+const config = {
   entry: './src/index.js',
-  output: {
-    filename: 'dist/index.js',
-    library: 'VueMedium',
-  },
   module: {
     rules: [
       {
@@ -17,3 +13,42 @@ module.exports = {
     ],
   },
 }
+
+const libraryConfig = Object.assign({
+  output: {
+    filename: 'dist/index.js',
+    library: 'VueMedium',
+  },
+}, config)
+
+const libraryMinifiedConfig = Object.assign({
+  output: {
+    filename: 'dist/index.min.js',
+    library: 'VueMedium',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [{
+          loader: 'uglify',
+        }],
+      },
+    ],
+  },
+}, config)
+
+const commonJsConfig = Object.assign({
+  output: {
+    filename: 'dist/index.common.js',
+    library: 'VueMedium',
+    libraryTarget: 'commonjs2',
+  },
+}, config)
+
+module.exports = [
+  libraryConfig,
+  libraryMinifiedConfig,
+  commonJsConfig,
+]
