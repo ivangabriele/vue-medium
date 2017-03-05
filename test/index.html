@@ -8,18 +8,20 @@
   </head>
   <body>
     <div id="app">
-      <div v-medium>Editable content.</div>
+      <medium v-model="content"></medium>
+      <div>{{ content }}</div>
     </div>
-    <script src="../node_modules/medium-editor/dist/js/medium-editor.js"></script>
     <script src="https://unpkg.com/vue"></script>
+    <script src="../dist/index.js"></script>
     <script>
-      Vue.directive('medium', {
-        inserted: function (el) {
-          new MediumEditor(el);
+      Vue.use(VueMedium);
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+          content: '<h1>hi !</h1>'
         }
       });
-
-      var app = new Vue({ el: '#app' });
     </script>
   </body>
 </html>

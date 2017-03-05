@@ -1,6 +1,6 @@
 {
   "name": "vue-medium",
-  "description": "",
+  "description": "Standalone Vue.js 2 plugin to use contentEditable as a model with medium-editor integration.",
   "main": "index.js",
   "authors": [
     "Ivan Gabriele <ivan.gabriele@gmail.com>"
@@ -13,8 +13,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "medium-editor": "^5.23.0"
-  }
+  ]
 }
