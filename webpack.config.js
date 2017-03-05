@@ -42,8 +42,7 @@ const libraryMinifiedConfig = Object.assign({
 const commonJsConfig = Object.assign({
   output: {
     filename: 'dist/index.common.js',
-    library: 'VueMedium',
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs',
   },
 }, config)
 
