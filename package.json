@@ -27,6 +27,8 @@
     "cross-env": "^3.2.3",
     "medium-editor": "^5.23.0",
     "uglify-loader": "^2.0.0",
+    "vue": "^2.2.1",
+    "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1"
   }
 }
