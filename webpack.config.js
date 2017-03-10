@@ -1,5 +1,5 @@
 const config = {
-  entry: './src/index.js',
+  entry: './src/index.es6',
   module: {
     rules: [
       {
@@ -46,8 +46,26 @@ const commonJsConfig = Object.assign({
   },
 }, config)
 
+const umdConfig = Object.assign({
+  output: {
+    filename: 'dist/index.umd.js',
+    library: "VueMedium",
+    libraryTarget: 'umd',
+  },
+}, config)
+
+const testConfig = Object.assign({
+  output: {
+    filename: 'spec/indexSpec.js',
+    library: 'VueMediumSpec',
+    libraryTarget: "assign"
+  },
+}, config)
+
 module.exports = [
   libraryConfig,
   libraryMinifiedConfig,
   commonJsConfig,
+  umdConfig,
+  // testConfig,
 ]

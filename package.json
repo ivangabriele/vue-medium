@@ -5,7 +5,7 @@
   "main": "dist/index.common.js",
   "scripts": {
     "build": "cross-env webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env npm run build & karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,15 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "cross-env": "^3.2.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^2.0.2",
     "medium-editor": "^5.23.0",
+    "phantomjs": "^2.1.7",
     "uglify-loader": "^2.0.0",
-    "vue": "^2.2.1",
+    "vue": "^2.2.2",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1"
   }
